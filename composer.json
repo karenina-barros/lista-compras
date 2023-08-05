@@ -1,0 +1,15 @@
+{
+    "name": "karenina/lista-compras",
+    "description": "Aplicativo de lista de compras inteligente",
+    "type": "project",
+    "require": {
+        "twig/twig": "v3.7.0",
+        "dompdf/dompdf": "v2.0.3"
+    },
+    "authors": [
+        {
+            "name": "Karenina Barros"
+        }
+    ],
+    "minimum-stability": "dev"
+}
