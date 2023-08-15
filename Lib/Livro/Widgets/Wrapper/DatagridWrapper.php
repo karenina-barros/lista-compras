@@ -80,7 +80,7 @@ class DatagridWrapper
 			}
 		}
 
-		$panel = new Panel;
+		$panel = new Panel( $this->decorated->getTitle() );
 		$panel->type = 'datagrid';
 		$panel->add( $element );
 		$panel->show();

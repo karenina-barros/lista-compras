@@ -9,6 +9,7 @@ class Datagrid
 	private $columns;
 	private $items;
 	private $actions;
+    private $title;
 
 	public function addColumn( DatagridColumn $object )
 	{
@@ -32,6 +33,16 @@ class Datagrid
 		}
 	}
 
+    public function setTitle( $title )
+    {
+        $this->title = $title;
+    }
+
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
 	public function getItems()
 	{
 		return $this->items;
@@ -51,5 +62,5 @@ class Datagrid
 	{
 		$this->items = [];
 	}
-}
+	}
 

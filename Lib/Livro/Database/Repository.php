@@ -6,16 +6,16 @@ use \Exception;
 
 final class Repository
 {
-	private $actiRecord;
+	private $activeRecord;
 	
 	public function __construct( $class )
 	{
-		 $this->actiRecord = $class;
+		 $this->activeRecord = $class;
 	}
 
 	public function load( Criteria $criteria )
 	{
-		$sql = "SELECT * FROM " . constant( $this->actiRecord.'::TABLENAME' );
+		$sql = "SELECT * FROM " . constant( $this->activeRecord.'::TABLENAME' );
 
 		if( $criteria ){
 			$expression = $criteria->dump();
@@ -46,7 +46,7 @@ final class Repository
 			$results = array();
 
 			if( $result ){
-				while( $row = $result->fetchObject( $this->actiRecord ) ){
+				while( $row = $result->fetchObject( $this->activeRecord ) ){
 					$results[] = $row;
 				}
 			}
@@ -60,7 +60,7 @@ final class Repository
 	public function delete( Criteria $criteria )
 	{
 		$expression = $criteria->dump();
-		$sql = "DELETE FROM " . constant( $this->actiRecord.'::TABLENAME' );
+		$sql = "DELETE FROM " . constant( $this->activeRecord.'::TABLENAME' );
 		if( $expression ){
 			$sql .= ' WHERE ' . $expression;
 		}
@@ -78,7 +78,7 @@ final class Repository
 	public function count( Criteria $criteria )
 	{
 		$expression = $criteria->dump();
-		$sql = "SELECT count(*) FROM " . constant( $this->actiRecord.'::TABLENAME' );
+		$sql = "SELECT count(*) FROM " . constant( $this->activeRecord.'::TABLENAME' );
 		
 		if( $expression ){
 			$sql .= ' WHERE ' . $expression;

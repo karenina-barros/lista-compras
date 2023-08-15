@@ -11,7 +11,7 @@ class Label extends Field implements FormElementInterface
 		$this->setValue( $value );
 		$this->tag = new Element( 'label' );
 		$this->tag->for = $value;
-		$this->tag->class = 'me-3 ms-1';
+	    $this->tag->class = 'me-3 ms-1';
 	}
 
 	public function add( $child )

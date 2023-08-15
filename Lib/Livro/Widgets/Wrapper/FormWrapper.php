@@ -34,16 +34,14 @@ class FormWrapper
 			$group->class = 'mb-3 row';
 
 			$label = new Element( 'label' );
-			$label->class = 'col-sm-2 col-form-label text-end pe-3';
+			$label->class = 'col-form-label col-sm-2';
 			$label->add( $field->getLabel() );
 
 			$col = new Element( 'div' );
-			$col->class = 'col-sm-10';
+			$col->class = 'col-sm-8';
 			$col->add( $field );
 			$field->class = 'form-control form-control-sm';
 
-			
-		
 			$group->add( $label );
 			$group->add( $col );
 			$element->add( $group );

@@ -35,7 +35,7 @@ trait ReloadTrait
 
 			Transaction::close();
 		}
-		catch( Exception $e ){
+		catch( \Exception $e ){
 			new Message( 'eror', $e->getMessage() );
 		}
 	}
